@@ -2,3 +2,4 @@ node_modules/
 .env
 *.log
 //Con este git ignore lo que consigo es que el node_modules, .env y los logs no se suban al repositorio.
+//ejemplo para subir

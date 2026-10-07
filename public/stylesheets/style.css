@@ -27,6 +27,103 @@ header {
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
+/** Estilos para la página de Contacto **/
+
+/* Estilo para el nav de la página contacto */
+nav {
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  padding: 10px 0;
+  width: 90vw;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s;
+  font-size: 1.1em;
+  padding: 6px 14px;
+  border-radius: 7px;
+}
+
+nav ul li a:hover, nav ul li a.active {
+  background-color: #e9f7ef;
+  color: #219150;
+}
+
+/* Ajuste de la sección de bienvenida en contacto */
+.hero {
+  min-height: 350px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 22px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 4px 24px rgba(60,90,120,0.12);
+  background: rgba(40,80,120,0.22);
+  backdrop-filter: blur(2px) brightness(0.98);
+}
+
+.hero h2 {
+  margin-bottom: 1rem;
+  font-size: 2em;
+}
+
+.hero a {
+  background-color: #219150;
+  color: #fff;
+  padding: 0.7em 2em;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.2s;
+  margin-top: 1.2rem;
+  display: inline-block;
+}
+.hero a:hover {
+  background-color: #14643d;
+}
+
+/* Centrar títulos y textos informativos */
+h1, .hero h2, .hero p {
+  text-align: center;
+}
+
+p {
+  margin-bottom: 1.1rem;
+}
+
+@media (max-width: 700px) {
+  .hero {
+    max-width: 94vw;
+    padding: 1.3rem 0.4rem;
+  }
+  nav {
+    width: 98vw;
+    font-size: 0.97em;
+  }
+}
+
+body.contact-page {
+  background: linear-gradient(135deg, #f4fff7 56%, #b7e3c9 100%);
+}
+
+
 .hero {
   background-image: url('https://picsum.photos/1920/1080?blur=2');
   background-size: cover;

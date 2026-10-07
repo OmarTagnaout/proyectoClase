@@ -1,31 +1,40 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <header>
-      Este es el header de la página
-    </header>
-    <nav>
-      <ul style="list-style: none; display: flex; justify-content: center; gap: 2rem; margin: 0; padding: 0;">
-        <li><a href="/" style="text-decoration: none; font-weight: bold;">Inicio</a></li>
-        <li><a href="/contacto" style="text-decoration: none; font-weight: bold;">Contacto</a></li>
-        <li><a href="/sobre-nosotros" style="text-decoration: none; font-weight: bold;">Sobre Nosotros</a></li>
-      </ul>
-    </nav>
-    <h1><%= title %></h1>
-    <section class="hero">
-      <h2>¡Bienvenido/a a <%= title %>!</h2>
-      <p>Tu punto de partida para descubrir las funcionalidades de nuestra aplicación. El lugar donde la innovación y el aprendizaje se encuentran.</p>
-      <a href="#">Comenzar Ahora</a>
-    </section>
-    <p>Bienvenidos todos y todas a  <%= title %></p>
-    <p>Esta es la pagina principal de la aplicacion</p>
 
-    <footer>
-      <p>&copy; <%= new Date().getFullYear() %> 2ºDAW FP Center. All rights reserved.</p>
-    </footer>
-  </body>
+<head>
+  <title>
+    <%= title %>
+  </title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <header>
+    Este es el header de la página
+  </header>
+  <nav>
+    <ul style="list-style: none; display: flex; justify-content: center; gap: 2rem; margin: 0; padding: 0;">
+      <li><a href="/" style="text-decoration: none; font-weight: bold;">Inicio</a></li>
+      <li><a href="/contacto" style="text-decoration: none; font-weight: bold;">Contacto</a></li>
+      <li><a href="/sobre-nosotros" style="text-decoration: none; font-weight: bold;">Sobre Nosotros</a></li>
+    </ul>
+  </nav>
+  <h1>
+    <%= title %>
+  </h1>
+  <section class="hero">
+    <h2>¡Bienvenido/a a <%= title %>!</h2>
+    <p>Tu punto de partida para descubrir las funcionalidades de nuestra aplicación. El lugar donde la innovación y el
+      aprendizaje se encuentran.</p>
+    <a href="#">Comenzar Ahora</a>
+  </section>
+  <p>Bienvenidos todos y todas a <%= title %>
+  </p>
+  <p>Esta es la pagina principal de la aplicacion</p>
+
+  <footer>
+    <p>&copy; <%= new Date().getFullYear() %> 2ºDAW FP Center. All rights reserved.</p>
+  </footer>
+</body>
+
 </html>

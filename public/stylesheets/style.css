@@ -4,6 +4,9 @@
   Los @import tienen que ir ARRIBA DEL TODO o el navegador los ignora.
   El orden importa: si dos archivos pisan la misma propiedad, gana el que se importa mas tarde.
 */
+
+@import url(vars.css);
+
 @import url("base.css");
 @import url("header.css");
 @import url("hero.css");
@@ -18,3 +21,4 @@
 * {
   outline: dashed 3px red;
 }
+

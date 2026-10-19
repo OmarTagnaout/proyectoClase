@@ -1,0 +1,15 @@
+
+/*
+Variables. tienen que ir antes que los imports.
+Entonces me voy a alguno de los import y pongo:
+color: var(--background-color-dark);
+
+Lo suyo es que todos los colores, por ejemplo, sean variables
+*/
+
+:root{
+    --background-color-dark: #012101;
+    --background-color-light: #8ba9ce;
+    --text-size-hero: 2rem;
+  
+  }

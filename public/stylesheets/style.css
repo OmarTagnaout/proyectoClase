@@ -1,11 +1,14 @@
 html, body {
   margin: 0;
   padding: 0;
+  /* Arreglo scroll horizontal: el padding cuenta dentro del ancho, no se suma por fuera */
+  box-sizing: border-box;
 }
 
 
 body {
-  padding: 50px;
+  /* Arreglo scroll horizontal: el padding 50px + hero/footer a 100vw ensanchaba la pagina */
+  padding: 0;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: #f0f0f0;
   display: flex;
@@ -17,7 +20,11 @@ body {
 /* CSS Hero */
 
 section.hero{
-  width: 100vw;
+  /* Arreglo scroll horizontal: 100% del padre, no 100vw (vw incluye la barra de scroll) */
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  min-width: 100%;
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -44,6 +51,34 @@ h1{
   margin-bottom:0px;
 }
 
+footer.footer{
+  min-width: 100%;
+  background: #1a1a1a;
+  color: #f0f0f0;
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 1.06em;
+  letter-spacing: 0.015em;
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.08);
+  /* Arreglo scroll horizontal: 100% en vez de 100vw */
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  opacity: 0.98;
+  transition: background 0.4s;
+  z-index: 50;
+  /* modern thin line above footer */
+  border-top: 2px solid #353535;
+  /* subtle blur effect */
+  backdrop-filter: blur(3px);
+  /* for mobile view */
+  min-height: 70px;
+}
 
 small{
   font-size: 20px;;
@@ -171,7 +206,6 @@ body.contact-page {
   background-size: cover;
   background-position: center;
   height: 100vh;
-  width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -180,7 +214,10 @@ body.contact-page {
   border-radius: 20px;
   color: #fff;
   margin-bottom: 2rem;
+  /* Arreglo scroll horizontal: 100% en vez de 100vw; el padding ya no se sale con border-box */
+  width: 100%;
   max-width: 100%;
+  box-sizing: border-box;
   position: relative;
   overflow: hidden;
 }
@@ -206,7 +243,10 @@ footer {
   letter-spacing: 0.01em;
   box-shadow: 0 -2px 8px rgba(0,0,0,0.07);
   position: relative;
-  width: 100vw;
+  /* Arreglo scroll horizontal: 100% en vez de 100vw */
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 footer p {
@@ -223,3 +263,4 @@ footer a:hover {
   color: #fff;
   text-decoration: none;
 }
+

@@ -1,0 +1,31 @@
+/*
+  CONTACTO
+  Solo se aplica si el <body> tiene class="contact-page" (views/contact.ejs).
+  Asi NO cambia el hero de index. Si quitas esa clase, este archivo no hace nada.
+*/
+
+body.contact-page {
+  background: linear-gradient(135deg, #f4fff7 56%, #b7e3c9 100%);
+}
+
+/* Hero mas pequeño si en contacto reutilizas <section class="hero"> (en contact.ejs ahora no hay hero) */
+body.contact-page .hero {
+  min-height: 350px;
+  height: auto;
+  max-width: 600px;
+  min-width: unset;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 22px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 4px 24px rgba(60, 90, 120, 0.12);
+  background: rgba(40, 80, 120, 0.22);
+  backdrop-filter: blur(2px) brightness(0.98);
+}
+
+@media (max-width: 700px) {
+  body.contact-page .hero {
+    max-width: 94vw;
+    padding: 1.3rem 0.4rem;
+  }
+}

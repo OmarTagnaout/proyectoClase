@@ -2,10 +2,12 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <!-- viewport: sin esto el movil "simula" escritorio y el CSS responsive no funciona -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- esto es lo que pone arriba en la pestaña, por eso no está en el body -->
-  <title>Document</title> 
-  
+  <title>Document</title>
+
+  <!-- Un solo CSS. style.css importa el resto con @import -->
   <link rel="stylesheet" href="/stylesheets/style.css">
   <script>
     console.log("Hola") //este script aparecerá antes que el body ya que está en el HEAD
@@ -13,30 +15,29 @@
 </head>
 <body>
 
-  <!-- el bloque hero, todo a lo ancho, centrado y imagen en el centrado -->
+  <!-- Portada a pantalla completa. Estilos: hero.css -->
   <section class="hero">
     <h1>Welcome to CESUR </h1>
-  <small>- Vocational Training Center</small>
+    <!-- Subtitulo. Estilo global de small: base.css -->
+    <small>- Vocational Training Center</small>
     <p>CESUR specializes in computer science education, offering cutting-edge Vocational Training programs designed for the tech industry. Join a forward-thinking learning community and boost your professional future in IT with us.</p>
   </section>
-  
-  <footer class="footer">
-    <!--El & hace que aparezca una entidad, es un caracter extraño-->
-    <!-- CESUR - The leading center in IT vocational training. -->
-    
 
-    <div class="footer-inner footer-columns">
+  <!-- Un solo footer. Estilos: footer.css -->
+  <footer class="footer">
+    <!-- El &copy; es una entidad HTML: pinta el simbolo © -->
+    <!-- footer-inner = la fila de 3 columnas -->
+    <div class="footer-inner">
       <div class="footer-inner-col">
-        <!-- Existing Empty Column, now with content -->
         <h3>About CESUR</h3>
         <ul>
+          <!-- href="#" es un enlace falso de ejemplo; en tu web pon rutas reales -->
           <li><a href="#">Who We Are</a></li>
           <li><a href="#">Mission & Vision</a></li>
           <li><a href="#">Our Team</a></li>
         </ul>
       </div>
       <div class="footer-inner-col">
-        <!-- Existing Empty Column, now with content -->
         <h3>Programs</h3>
         <ul>
           <li><a href="#">Computer Science</a></li>
@@ -45,17 +46,17 @@
         </ul>
       </div>
       <div class="footer-inner-col">
-        <!-- Existing Empty Column, now with content -->
         <h3>Contact</h3>
         <ul>
+          <!-- /contacto es una ruta de Express (routes/index.js), no un archivo .html -->
           <li><a href="/contacto">Contact Us</a></li>
           <li><a href="#">Admissions</a></li>
           <li><a href="#">Events</a></li>
         </ul>
       </div>
     </div>
+    <!-- Raya entre columnas y copyright. No es un <hr>, es un div pintado con CSS -->
     <div class="footer-line"></div>
-    <hr>
     <p>&copy; 2026 CESUR - Empowering your future in Computer Science. All rights reserved.</p>
   </footer>
 

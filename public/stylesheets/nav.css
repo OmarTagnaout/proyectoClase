@@ -1,0 +1,53 @@
+/*
+  NAV
+  Menu horizontal de enlaces (Inicio, Contacto...).
+  Se usa en views/contact.ejs. En index.ejs no hay <nav> todavia.
+  Si el HTML tiene style="" en el <ul>, esos estilos inline ganan a este archivo.
+*/
+
+nav {
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  padding: 10px 0;
+  width: 90vw;
+  max-width: 900px;
+  /* auto a izquierda y derecha = el nav queda centrado */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Lista en fila, sin viñetas */
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s;
+  font-size: 1.1em;
+  padding: 6px 14px;
+  border-radius: 7px;
+}
+
+/* .active: pon class="active" en el enlace de la pagina en la que estas */
+nav ul li a:hover,
+nav ul li a.active {
+  background-color: #e9f7ef;
+  color: #219150;
+}
+
+@media (max-width: 700px) {
+  nav {
+    width: 98vw;
+    font-size: 0.97em;
+  }
+}

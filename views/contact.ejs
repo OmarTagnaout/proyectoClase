@@ -2,22 +2,27 @@
 <html>
   <head>
     <title>Contacto</title>
+    <!-- Mismo CSS que index: style.css carga nav.css y contact.css -->
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
-  <body>
-   
+  <!--
+    contact-page activa los estilos de contact.css (fondo verde, etc.).
+    Sin esta clase, contact.css no se aplica.
+  -->
+  <body class="contact-page">
+
     <h1>Contacto</h1>
     <p>Esta es la pagina de contacto de la aplicacion</p>
 
+    <!-- Menu. Estilos en nav.css. Los style="" de abajo pisan al CSS: quitalos si quieres usar solo nav.css -->
     <nav>
       <ul style="list-style: none; display: flex; justify-content: center; gap: 2rem; margin: 0; padding: 0;">
         <li><a href="/" style="text-decoration: none; font-weight: bold;">Inicio</a></li>
         <li><a href="/contacto" style="text-decoration: none; font-weight: bold;">Contacto</a></li>
+        <!-- Esta ruta NO existe todavia en routes/index.js: dara 404 hasta que la crees -->
         <li><a href="/sobre-nosotros" style="text-decoration: none; font-weight: bold;">Sobre Nosotros</a></li>
       </ul>
     </nav>
-    
 
-     
   </body>
 </html>

@@ -1,0 +1,43 @@
+/*
+  BASE
+  Reset y estilos globales. Se aplican a toda la web, no a una seccion concreta.
+*/
+
+html, body {
+  /* Sin esto el navegador deja un margen blanco alrededor */
+  margin: 0;
+  padding: 0;
+  /* border-box: width incluye padding y borde. Si no, el padding se SUMA y sale scroll horizontal */
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #f0f0f0;
+  /* Columna: hero arriba, footer abajo. Sin esto los hijos se ponen en fila o se estiran raro */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* El <small> del hero (subtitulo bajo el h1) */
+small {
+  font-size: 20px;
+}
+
+/* Los parrafos no se estiran a todo el ancho; se leen peor si la linea es muy larga */
+p {
+  max-width: 600px;
+  margin-bottom: 1.1rem;
+}
+
+/* Color por defecto de CUALQUIER enlace. El footer y el nav lo pisan con reglas mas concretas */
+a {
+  color: #00B7FF;
+}
+
+h1 {
+  text-align: center;
+}

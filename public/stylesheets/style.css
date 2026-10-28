@@ -18,7 +18,48 @@
   Outline de maquetacion: pinta un borde en TODOS los elementos para ver cajas.
   Cuando termines de maquetar, borra o comenta este bloque.
 */
+/*
 * {
   outline: dashed 3px red;
 }
+  */
+
+
+  /*CSS Header*/
+
+  section.header{
+
+
+    background-color: blue;
+
+
+    nav.header-navbar{
+
+
+      ul{
+        flex-direction: row;
+        gap: 1rem;
+        justify-content:center ;
+        padding:0;
+        list-style-type: none;
+        margin:0;
+        padding: 0;
+
+        a{
+          color:white;
+
+          &hover{
+            background-color: aquamarine;
+          }
+
+        }
+
+      }
+
+
+    }
+
+
+  }
+
 

@@ -8,12 +8,51 @@
   <title>Document</title>
 
   <!-- Un solo CSS. style.css importa el resto con @import -->
+
+
+<!-- Hidden menu markup (no CSS, just HTML) -->
+ <aside class="off-canvas">
+  <nav id="off-canvas-menu">
+<button class="off-canvas-close">&times;</button>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="#programs">Programs</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="/contacto">Contact</a></li>
+    <li><a href="#">Student Portal</a></li>
+  </ul>
+</nav>
+</aside>
+
+
+
+
+<aside class="off-canvas"></aside>
+
+
   <link rel="stylesheet" href="/stylesheets/style.css">
   <script>
     console.log("Hola") //este script aparecerá antes que el body ya que está en el HEAD
   </script>
 </head>
 <body>
+
+<section class="header">
+  <nav class="header-navbar">
+    <img src="/public/images/photo.png" alt="">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="#programs" id="open_offcanvas">Programs</a></li>
+      <li><a href="#about">About</a></li>
+      
+    </ul>
+    <ul>
+      <li><a href="/contacto">Contact</a></li>
+    </ul>
+  </nav>
+</section>
+
+
 
   <!-- Portada a pantalla completa. Estilos: hero.css -->
   <section class="hero">
@@ -59,6 +98,14 @@
     <div class="footer-line"></div>
     <p>&copy; 2026 CESUR - Empowering your future in Computer Science. All rights reserved.</p>
   </footer>
+
+<!-- Tendria que tener un menu hidden pero de momento no 
+ El JS va dentro del public porque se va a ejecutar en el navegador-->
+
+<script src="/javascripts/app.js"></script>
+
+
+
 
 </body>
 </html>

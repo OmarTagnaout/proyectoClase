@@ -1,0 +1,65 @@
+
+  /* ===== Card de programa =====
+     Estructura HTML: div.card > img + div.card-inner (h4 + p) */
+     div.card{
+        /* Flex en columna: la imagen arriba y el texto debajo, apilados */
+        display: flex;
+        flex-direction: column;
+        /* Alto minimo y ancho fijos: todas las cards de la fila acaban midiendo
+           lo mismo (flex estira las de la misma linea) y ninguna se queda corta
+           si su descripcion ocupa mas lineas. NO usar min-height: 100vh: eso
+           obliga a la card a medir como minimo la pantalla entera */
+        min-height: 350px;
+        width: 250px;
+    
+        box-shadow: 0 0 2px 2px gray;
+    
+        /* Alinea los hijos a todo el ancho. No se usa center porque una imagen
+           centrada se queda en su tamano natural y deja aire a los lados:
+           con stretch ocupa todo el ancho de la card */
+        align-items: stretch;
+    
+        /* Borde de 1px para ver el limite de la caja */
+        border: solid 1px black;
+    
+        /* hidden: lo que se salga de la card (la foto recortada) no se ve fuera */
+        overflow: hidden;
+    
+        /* La imagen ocupa todo el ancho y el alto que le deja el texto.
+           flex: 1 = se queda con el espacio sobrante de la card.
+           object-fit: cover rellena esa caja sin deformar la foto (recorta lo que
+           sobra). Es una propiedad de la IMAGEN, no de la card */
+        & img{
+          width: 100%;
+          flex: 1;
+          /* sin esto la imagen se niega a encogerse y empuja el texto fuera */
+          min-height: 0;
+          object-fit: cover;
+          /* block quita el hueco de ~4px que el navegador deja bajo las imagenes
+             inline, que si no deja una franja en blanco bajo la foto */
+          display: block;
+        }
+    
+        /* Zona de texto: el padding lo separa del borde de la card.
+           bottom:0 solo funciona con position: absolute/relative, aqui no hacia nada */
+        & div.card-inner{
+          padding: 0.5rem;
+          background: linear-gradient(white, gray);
+        }
+    
+        /* h4 y p sin margenes: el aire ya lo pone el padding de arriba.
+           text-align centra el texto debajo de la imagen */
+        & h4, & p{
+          margin: 0;
+          text-align: center;
+        }
+    
+        /* Titulo mas grande que el texto normal (1.5rem = 24px) */
+        & h4{
+          font-size: 1.5rem;
+        }
+    
+      }
+    
+    
+    

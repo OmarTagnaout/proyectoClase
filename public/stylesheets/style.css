@@ -13,6 +13,8 @@
 @import url("footer.css");
 @import url("nav.css");
 @import url("contact.css");
+@import url("courses.css");
+@import url("card.css");
 
 /*
   Outline de maquetacion: pinta un borde en TODOS los elementos para ver cajas.
@@ -40,15 +42,18 @@
         flex-direction: row;
         gap: 1rem;
         justify-content:center ;
-        padding:0;
         list-style-type: none;
         margin:0;
+        /* quita el sangrado que el navegador pone por defecto a las listas */
         padding: 0;
+        /* OJO: la ul necesita display:flex para que flex-direction y gap hagan algo */
+        display: flex;
 
+        /* hover: cuando el raton pasa por encima del enlace */
         a{
           color:white;
 
-          &hover{
+          &:hover{
             background-color: aquamarine;
           }
 
@@ -61,5 +66,4 @@
 
 
   }
-
 

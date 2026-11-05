@@ -1,0 +1,53 @@
+/*
+  COURSES
+  Seccion de programas del centro: un titulo y una fila de 4 cards.
+  Limitacion del proyecto: flex, no grid.
+  El aspecto de cada card (.card) esta en style.css.
+*/
+
+section.courses {
+  /* 100% del ancho del body, pero sin pasarse de 75rem: en pantallas muy
+     anchas las cards no se separan hasta el infinito */
+  width: 100%;
+  max-width: 75rem;
+  /* rem para el padding, como el resto del proyecto */
+  padding: 3rem 1rem;
+}
+
+section.courses h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin: 0 0 2rem;
+}
+
+/* La fila de cards */
+.courses-inner {
+  display: flex;
+  /* wrap: si las 4 cards no caben a lo ancho, las que sobren bajan a otra fila
+     en vez de salirse de la pantalla */
+  flex-wrap: wrap;
+  /* flex-end = pega las cards al borde DERECHO del contenedor.
+     Para centrarlas seria center; a la izquierda, flex-start */
+  justify-content: flex-end;
+  /* separacion entre cards (sustituye a los margins, no se suma con el borde) */
+  gap: 1rem;
+}
+
+/* Linea pequeña bajo la descripcion de la card (duracion y modalidad).
+   Necesita mas especificidad que "div.card p" (que pone margin: 0) */
+div.card .card-meta {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  /* gris oscuro: el fondo de la card es un degradado claro, un gris muy
+     claro se leeria mal encima */
+  color: #333333;
+}
+
+/* Pantalla estrecha: las cards no caben en una fila, asi que se apilan.
+   Aqui si conviene centrarlas: a la derecha quedarian pegadas al borde
+   con un hueco vacio enorme a la izquierda */
+@media (max-width: 60rem) {
+  .courses-inner {
+    justify-content: center;
+  }
+}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <!-- viewport: sin esto el movil "simula" escritorio y el CSS responsive no funciona -->
@@ -52,14 +52,63 @@
   </nav>
 </section>
 
-
-
   <!-- Portada a pantalla completa. Estilos: hero.css -->
   <section class="hero">
     <h1>Welcome to CESUR </h1>
     <!-- Subtitulo. Estilo global de small: base.css -->
     <small>- Vocational Training Center</small>
     <p>CESUR specializes in computer science education, offering cutting-edge Vocational Training programs designed for the tech industry. Join a forward-thinking learning community and boost your professional future in IT with us.</p>
+  </section>
+
+  <!-- Programas del centro: fila de 4 cards.
+       id="programs" es el destino del enlace #programs del nav.
+       Estilos: courses.css -->
+  <section class="courses" id="programs">
+    <h2>Our Programs</h2>
+
+    <!-- courses-inner = la fila. En courses.css lleva justify-content: flex-end
+         para pegar las cards a la derecha -->
+    <div class="courses-inner">
+
+      <!-- Card: .card (caja) > img + .card-inner (texto). Estilos en card.css -->
+      <div class="card">
+        <!-- seed/webdev: fuerza SIEMPRE la misma foto, no cambia al recargar -->
+        <img src="https://picsum.photos/seed/webdev/400/250" alt="Student writing the code of a web page">
+        <div class="card-inner">
+          <h4>Web Application Development</h4>
+          <p>Two-year program on HTML5, CSS3, JavaScript and Node.js. Learn to build, test and deploy full-stack web applications.</p>
+          <p class="card-meta">2 years &middot; On campus</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://picsum.photos/seed/mobileapps/400/250" alt="Developer testing a mobile app on a smartphone">
+        <div class="card-inner">
+          <h4>Multiplatform App Development</h4>
+          <p>Design mobile and desktop applications for Android, iOS and Windows using Java, Kotlin and Swift.</p>
+          <p class="card-meta">2 years &middot; On campus</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://picsum.photos/seed/networks/400/250" alt="Server rack inside a data centre">
+        <div class="card-inner">
+          <h4>Network Systems Administration</h4>
+          <p>Deploy servers, networks and cloud infrastructure. Prepare for the CCNA and Linux administration certifications.</p>
+          <p class="card-meta">2 years &middot; On campus</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://picsum.photos/seed/cybersecurity/400/250" alt="Security analyst monitoring network traffic on screens">
+        <div class="card-inner">
+          <h4>Cybersecurity &amp; Ethical Hacking</h4>
+          <p>Learn threat analysis, penetration testing and digital forensics to protect corporate systems and data.</p>
+          <p class="card-meta">1 year &middot; Hybrid</p>
+        </div>
+      </div>
+
+    </div>
   </section>
 
   <!-- Un solo footer. Estilos: footer.css -->
@@ -99,8 +148,11 @@
     <p>&copy; 2026 CESUR - Empowering your future in Computer Science. All rights reserved.</p>
   </footer>
 
-<!-- Tendria que tener un menu hidden pero de momento no 
+<!-- Tendria que tener un menu hidden pero de momento
  El JS va dentro del public porque se va a ejecutar en el navegador-->
+
+
+
 
 <script src="/javascripts/app.js"></script>
 
